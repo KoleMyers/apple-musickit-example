@@ -21,8 +21,6 @@ const key_id = 'KLMNOPQRST';
 
 ## Additional Resources & helpful links
  - https://developer.apple.com/documentation/musickitjs
- - https://codegists.com/snippet/javascript/indexjs_aljs_javascript
  - https://help.apple.com/developer-account/#/devce5522674
- - https://developer.apple.com/documentation/musickitjs/musickit
  - https://github.com/zachomedia/apple-music-webplayer
  
