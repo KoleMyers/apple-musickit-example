@@ -1,0 +1,6 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+apple_private_key.p8
+
+# dependencies
+/node_modules/
