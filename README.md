@@ -1,6 +1,6 @@
-# Apple Musickit Example
+# Apple MusicKit Example
 
-Very simple example of working with the [Apple MusicKit Javascript library](https://developer.apple.com/documentation/musickitjs). Development only
+A very simple example of working with the [Apple MusicKit Javascript library](https://developer.apple.com/documentation/musickitjs). Intended for Development only
 
 
 ## Development
@@ -19,9 +19,10 @@ const key_id = 'KLMNOPQRST';
 - visit your app at http://localhost:8080/
 - the `music` variable will be globally exposed in the javascript console to mess around with
 
-## Additional Resources 
+## Additional Resources & helpful links
  - https://developer.apple.com/documentation/musickitjs
  - https://codegists.com/snippet/javascript/indexjs_aljs_javascript
  - https://help.apple.com/developer-account/#/devce5522674
  - https://developer.apple.com/documentation/musickitjs/musickit
+ - https://github.com/zachomedia/apple-music-webplayer
  
