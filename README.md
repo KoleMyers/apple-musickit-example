@@ -13,9 +13,12 @@ const team_id = 'ABCDEFGHIJ';
 const key_id = 'KLMNOPQRST';
 ```
 
-run `node server.js` to start
+- run `node server.js` to start
+- the `music` variable will be globally exposed in the javascript console to mess around with
 
 ## Additional Resources 
  - https://developer.apple.com/documentation/musickitjs
  - https://codegists.com/snippet/javascript/indexjs_aljs_javascript
  - https://help.apple.com/developer-account/#/devce5522674
+ - https://developer.apple.com/documentation/musickitjs/musickit
+ 
