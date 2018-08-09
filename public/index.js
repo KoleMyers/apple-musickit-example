@@ -1,4 +1,4 @@
-const ajax = function (method, url, data, callback) {
+const ajax = function(method, url, data, callback) {
   try {
     var x = new(XMLHttpRequest || ActiveXObject)('MSXML2.XMLHTTP.3.0');
     x.open(method, url, 1);
@@ -12,11 +12,12 @@ const ajax = function (method, url, data, callback) {
   } catch (e) {}
 };
 
-const el = (id) => {
+const el = function(id) {
   return document.getElementById(id);
 }
 
 let music;
+
 document.addEventListener('musickitloaded', function() {
   // MusicKit global is now defined
   ajax('get', '/token', {}, function(res) {
