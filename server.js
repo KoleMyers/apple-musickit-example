@@ -17,6 +17,7 @@ const private_key = fs.readFileSync('apple_private_key.p8').toString();
 const team_id = 'ABCDEFGHIJ'; // your 10 character apple team id, found in https://developer.apple.com/account/#/membership/
 const key_id = 'KLMNOPQRST'; // your 10 character generated music key id. more info https://help.apple.com/developer-account/#/dev646934554
 const token = jwt.sign({}, private_key, {
+  algorithm: "ES256",
   expiresIn: '180d',
   issuer: team_id,
   header: {
