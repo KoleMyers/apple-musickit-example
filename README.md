@@ -1,8 +1,8 @@
-#Apple Musickit Example
+# Apple Musickit Example
 
 Very simple example of working with apple musicKit. Development only
 
 
-##Development
+## Development
 
 `node server.js` to start
