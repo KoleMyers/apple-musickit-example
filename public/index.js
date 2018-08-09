@@ -24,7 +24,7 @@ document.addEventListener('musickitloaded', function() {
     MusicKit.configure({
       developerToken: res.token,
       app: {
-        name: 'Developmentspeak',
+        name: 'TestAppleMusicKit',
         build: '1978.4.1'
       }
     });
