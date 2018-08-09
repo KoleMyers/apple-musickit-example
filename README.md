@@ -5,7 +5,15 @@ Very simple example of working with apple musicKit. Development only
 
 ## Development
 
-`node server.js` to start
+ - put your private key in a `apple_private_key.p8` file in the root directory
+ - add your team & app id's in `server.js`  
+
+```
+const team_id = 'ABCDEFGHIJ';
+const key_id = 'KLMNOPQRST';
+```
+
+run `node server.js` to start
 
 ## Additional Resources 
  - https://developer.apple.com/documentation/musickitjs
