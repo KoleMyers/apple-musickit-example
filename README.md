@@ -8,7 +8,7 @@ A very simple example of working with the [Apple MusicKit Javascript library](ht
 - `cd apple-musickit-example`
 - `npm install`
  - put your [private key](https://help.apple.com/developer-account/#/devce5522674) in a `apple_private_key.p8` file in the root directory
- - add your team & app id's in `server.js`  
+ - add your team & key id's in `server.js`  
 
 ```
 const team_id = 'ABCDEFGHIJ';
