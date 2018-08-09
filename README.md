@@ -1,6 +1,6 @@
 # Apple Musickit Example
 
-Very simple example of working with apple musicKit. Development only
+Very simple example of working with apple MusicKit Javascript library. Development only
 
 
 ## Development
