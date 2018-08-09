@@ -1,6 +1,6 @@
 # Apple MusicKit Example
 
-A very simple example of working with the [Apple MusicKit Javascript library](https://developer.apple.com/documentation/musickitjs). Intended for Development only
+A very simple example of working with the [Apple MusicKit Javascript API](https://developer.apple.com/documentation/musickitjs). Intended for Development only
 
 
 ## Development
