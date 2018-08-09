@@ -4,7 +4,9 @@ Very simple example of working with apple musicKit. Development only
 
 
 ## Development
-
+- `git clone https://github.com/KoleMyers/apple-musickit-example.git` the repository
+- `cd apple-musickit-example`
+- `npm install`
  - put your [private key](https://help.apple.com/developer-account/#/devce5522674) in a `apple_private_key.p8` file in the root directory
  - add your team & app id's in `server.js`  
 
@@ -14,6 +16,7 @@ const key_id = 'KLMNOPQRST';
 ```
 
 - run `node server.js` to start
+- visit your app at http://localhost:8080/
 - the `music` variable will be globally exposed in the javascript console to mess around with
 
 ## Additional Resources 
