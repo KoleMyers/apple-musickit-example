@@ -16,6 +16,7 @@ const el = (id) => {
   return document.getElementById(id);
 }
 
+let music;
 document.addEventListener('musickitloaded', function() {
   // MusicKit global is now defined
   ajax('get', '/token', {}, function(res) {
@@ -28,7 +29,7 @@ document.addEventListener('musickitloaded', function() {
       }
     });
 
-    const kit = MusicKit.getInstance();
+    music = MusicKit.getInstance();
 
     el("add-to-q-btn").addEventListener("click", function(){
       const idInput   = el('id-input');
@@ -36,7 +37,7 @@ document.addEventListener('musickitloaded', function() {
       const id        = idInput.value;
       const type      = typeInput.value;
 
-      kit.setQueue({
+      music.setQueue({
         [type]: id
       });
 
@@ -45,11 +46,11 @@ document.addEventListener('musickitloaded', function() {
     });
 
     el("play-btn").addEventListener("click", function(){
-      kit.play();
+      music.play();
     });
 
     el("pause-btn").addEventListener("click", function(){
-      kit.pause();
+      music.pause();
     });
   });
 });
