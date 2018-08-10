@@ -17,7 +17,7 @@ document.addEventListener('musickitloaded', function() {
       return document.getElementById(id);
     }
 
-    el("add-to-q-btn").addEventListener("click", function(){
+    el('add-to-q-btn').addEventListener('click', function(){
       const idInput   = el('id-input');
       const typeInput = el('type-input');
 
@@ -25,15 +25,15 @@ document.addEventListener('musickitloaded', function() {
         [typeInput.value]: idInput.value
       });
 
-      idInput.value   = "";
-      typeInput.value = "";
+      idInput.value   = '';
+      typeInput.value = '';
     });
 
-    el("play-btn").addEventListener("click", function(){
+    el('play-btn').addEventListener('click', function(){
       music.play();
     });
 
-    el("pause-btn").addEventListener("click", function(){
+    el('pause-btn').addEventListener('click', function(){
       music.pause();
     });
   });
