@@ -17,7 +17,7 @@ const key_id = 'KLMNOPQRST';
 
 - run `node server.js` to start
 - visit your app at http://localhost:8080/
-- Your configured MusicKit instance will be globally exposed in the `music` variable for you to use or mess around with in the javascript console <br/>![Alt Text](https://i.imgur.com/RieNsp6.gif)
+- Your configured MusicKit instance will be globally exposed in the `music` variable for you to use <br/>![Alt Text](https://i.imgur.com/RieNsp6.gif)
 
 ## Additional Resources & helpful links
  - https://developer.apple.com/documentation/musickitjs
