@@ -3,15 +3,13 @@ let music;
 document.addEventListener('musickitloaded', () => {
   // MusicKit global is now defined
   fetch('/token').then(response => response.json()).then(res => {
-    MusicKit.configure({
+    music = MusicKit.configure({
       developerToken: res.token,
       app: {
         name: 'TestAppleMusicKit',
         build: '1978.4.1'
       }
     });
-
-    music = MusicKit.getInstance();
 
     const getEl = (id) => {
       return document.getElementById(id);
