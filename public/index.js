@@ -1,4 +1,9 @@
+// global to contain musicKit
 let music;
+
+function getEl(id) {
+  return document.getElementById(id);
+}
 
 document.addEventListener('musickitloaded', () => {
   // MusicKit global is now defined
@@ -11,10 +16,7 @@ document.addEventListener('musickitloaded', () => {
       }
     });
 
-    const getEl = (id) => {
-      return document.getElementById(id);
-    }
-
+    // setup click handlers
     getEl('add-to-q-btn').addEventListener('click', () => {
       const idInput   = getEl('id-input');
       const typeInput = getEl('type-input');
@@ -33,6 +35,12 @@ document.addEventListener('musickitloaded', () => {
 
     getEl('pause-btn').addEventListener('click', () => {
       music.pause();
+    });
+
+    getEl('login-btn').addEventListener('click', () => {
+      music.authorize().then(musicUserToken => {
+        console.log(musicUserToken);
+      });
     });
   });
 });
