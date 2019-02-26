@@ -4,7 +4,8 @@ A very simple example of working with the [Apple MusicKit Javascript API](https:
 
 
 ## Development
-- `npm install apple-musickit-example`
+- `git clone https://github.com/KoleMyers/apple-musickit-example.git` the repository
+- `npm install`
 - `cd apple-musickit-example`
  - put your [private key](https://help.apple.com/developer-account/#/devce5522674) in a `apple_private_key.p8` file in the root directory
  - add your team & key id's in `server.js`  
