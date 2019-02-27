@@ -1,26 +1,28 @@
-// global to contain musicKit
-let music;
-
-function getEl(id) {
-  return document.getElementById(id);
-}
-
+// listen for MusicKit Loaded callback
 document.addEventListener('musickitloaded', () => {
   // MusicKit global is now defined
   fetch('/token').then(response => response.json()).then(res => {
-    music = MusicKit.configure({
+    /***
+      Configure our MusicKit instance with the signed token from server, returns a configured MusicKit Instance
+      https://developer.apple.com/documentation/musickitjs/musickit/musickitinstance
+    ***/
+    const music = MusicKit.configure({
       developerToken: res.token,
       app: {
-        name: 'TestAppleMusicKit',
+        name: 'AppleMusicKitExample',
         build: '1978.4.1'
       }
     });
 
     // setup click handlers
-    getEl('add-to-q-btn').addEventListener('click', () => {
-      const idInput   = getEl('id-input');
-      const typeInput = getEl('type-input');
+    document.getElementById('add-to-q-btn').addEventListener('click', () => {
+      const idInput   = document.getElementById('id-input');
+      const typeInput = document.getElementById('type-input');
 
+      /***
+        Add an item to the playback queue
+        https://developer.apple.com/documentation/musickitjs/musickit/musickitinstance/2992716-setqueue
+      ***/
       music.setQueue({
         [typeInput.value]: idInput.value
       });
@@ -29,18 +31,33 @@ document.addEventListener('musickitloaded', () => {
       typeInput.value = '';
     });
 
-    getEl('play-btn').addEventListener('click', () => {
+    document.getElementById('play-btn').addEventListener('click', () => {
+      /***
+        Resume or start playback of media item
+        https://developer.apple.com/documentation/musickitjs/musickit/musickitinstance/2992709-play
+      ***/
       music.play();
     });
 
-    getEl('pause-btn').addEventListener('click', () => {
+    document.getElementById('pause-btn').addEventListener('click', () => {
+      /***
+        Pause playback of media item
+        https://developer.apple.com/documentation/musickitjs/musickit/musickitinstance/2992708-pause
+      ***/
       music.pause();
     });
 
-    getEl('login-btn').addEventListener('click', () => {
+    document.getElementById('login-btn').addEventListener('click', () => {
+      /***
+        Returns a promise which resolves with a music-user-token when a user successfully authenticates and authorizes
+        https://developer.apple.com/documentation/musickitjs/musickit/musickitinstance/2992701-authorize
+      ***/
       music.authorize().then(musicUserToken => {
-        console.log(musicUserToken);
+        console.log(`Authorized, music-user-token: ${musicUserToken}`);
       });
     });
+
+    // expose our instance globally for testing
+    window.music = music;
   });
 });

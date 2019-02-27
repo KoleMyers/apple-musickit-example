@@ -11,8 +11,8 @@ A very simple example of working with the [Apple MusicKit Javascript API](https:
  - add your team & key id's in `server.js`  
 
 ```
-const team_id = 'ABCDEFGHIJ';
-const key_id = 'KLMNOPQRST';
+const team_id = 'ABCDEFGHIJ'; // your team id
+const key_id = 'KLMNOPQRST'; // your key id
 ```
 
 - run `npm start` to start
