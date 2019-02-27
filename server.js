@@ -6,6 +6,7 @@ const port = parseInt(process.env.PORT, 10) || 8080;
 const publicDir = process.argv[2] || __dirname + '/public';
 const path = require('path');
 
+// library for signing tokens
 const jwt = require('jsonwebtoken');
 const fs = require('fs');
 
@@ -13,7 +14,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(publicDir, '/index.html'));
 });
 
-const private_key = fs.readFileSync('apple_private_key.p8').toString();
+const private_key = fs.readFileSync('apple_private_key.p8').toString(); // read your private key from your file system
 const team_id = 'ABCDEFGHIJ'; // your 10 character apple team id, found in https://developer.apple.com/account/#/membership/
 const key_id = 'KLMNOPQRST'; // your 10 character generated music key id. more info https://help.apple.com/developer-account/#/dev646934554
 const token = jwt.sign({}, private_key, {
